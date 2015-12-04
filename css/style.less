@@ -1,0 +1,116 @@
+@color-grey: #333;
+@color-danger: #ef3434;
+@color-green: #0B7D35;
+@color-warning: #ffc600;
+
+body{
+	font-family: 'Roboto Condensed', sans-serif;
+	font-size: 15px;
+	line-height: 150%;
+	font-weight: 500;
+	color: @color-grey;
+	width: 600px;
+	margin: 10% auto 0;
+}
+
+body.iframe-product{
+	width: 100%;
+	margin: 0;
+}
+
+h1{
+	font-size: 24px;
+	font-weight: 500;
+	border-bottom: 1px solid lighten(@color-grey, 50%);
+	margin-bottom: 10px;
+	padding-bottom: 10px;
+}
+
+iframe{
+	width: 100%;
+	height: 300px;
+	border:none; 
+}
+
+a{
+	color: @color-danger;
+	text-decoration: none;
+}
+
+a:hover{
+	color: darken(@color-danger, 7.5%);
+}
+
+.alert{
+	padding: 10px;
+	border-width: 1px;
+	border-style: solid;
+	font-weight: 500;
+}
+
+.alert-danger{
+	color: @color-danger;
+	border-color: @color-danger;
+	background: lighten(@color-danger, 22.5%);
+}
+
+.alert-success{
+	color: @color-green;
+	border-color: @color-green;
+	background: lighten(@color-green, 22.5%);
+}
+
+.alert-warning{
+	color: darken(@color-warning,7.5%);
+	border-color: @color-warning;
+	background: lighten(@color-warning, 22.5%);
+}
+
+.loading .result{
+	margin-left: 60px;
+	margin-top: 15px;
+}
+
+.loading .result p{
+	margin: 5px 0; 
+}
+
+.sk-spinner-double-bounce.sk-spinner {
+  width: 40px;
+  height: 40px;
+  position: relative;
+  margin: 0;
+  float: left;
+}
+.sk-spinner-double-bounce .sk-double-bounce1, .sk-spinner-double-bounce .sk-double-bounce2 {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: @color-green;
+  opacity: 0.6;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-animation: sk-doubleBounce 2s infinite ease-in-out;
+          animation: sk-doubleBounce 2s infinite ease-in-out; }
+.sk-spinner-double-bounce .sk-double-bounce2 {
+  -webkit-animation-delay: -1s;
+          animation-delay: -1s; }
+
+@-webkit-keyframes sk-doubleBounce {
+  0%, 100% {
+    -webkit-transform: scale(0);
+            transform: scale(0); }
+
+  50% {
+    -webkit-transform: scale(1);
+            transform: scale(1); } }
+
+@keyframes sk-doubleBounce {
+  0%, 100% {
+    -webkit-transform: scale(0);
+            transform: scale(0); }
+
+  50% {
+    -webkit-transform: scale(1);
+            transform: scale(1); } }
