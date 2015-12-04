@@ -48,7 +48,7 @@
 	$selectline['order_prefix'] = '2015_';
 
 	// Steuerschlüssel
-	$selectline['tax'] = array( 2 => '7', 3 => '19', 10 => '0');
+	$selectline['tax'] = array( 2 => '7', 3 => '19', 10 => '0', 11 => '0');
 	$selectline['taxCodes'] = array('7' => '2', '19' => '3', '0' => '10');
 	
 	$selectline['limit'] = 10;

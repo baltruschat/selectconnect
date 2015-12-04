@@ -44,8 +44,10 @@ $oxid = array(
 
 	'vouchers' => array(
 		'61739677b8926324982d44436713508a'	=> array('type' => 'delivery', 'artnum' => '9908'), // Newsletter Versandkostenfrei
-		'a96c1ff7b300c4c713a4c6388c76f802'	=> array('type' => 'discount', 'discountGroup' => '6000'),
-		'075b0c58634542628832c9977d55b59d'	=> array('type' => 'discount', 'discountGroup' => '6000')
+		'a96c1ff7b300c4c713a4c6388c76f802'	=> array('type' => 'discount', 'discountGroup' => '6000'), // Gutschein Neukunden 10%
+		'075b0c58634542628832c9977d55b59d'	=> array('type' => 'discount', 'discountGroup' => '6000'), // Gutschein Newsletter 10%
+		'41d2e46db38f050262795bfbe4ff051f'	=> array('type' => 'discount', 'discountGroup' => '6000'), // Gutschein Weihnachten Grußkarte 10%
+		'416320be16f3d49171b222a6bd3006ed'  => array('type' => 'delivery_article', 'delivery' => '9908', 'discount_article' => '22903') // Guscheine Herzstiftung 12/2015
 	),
 
 	'payment' => array(
