@@ -15,11 +15,12 @@
     <link rel="stylesheet" href="../css/github.css">
   </head>
 
-  <body>
-
+  <body style="background: #EEE;">
+  <div class="container-fluid">
     <div class="row">
-      <div class="col-xs-12 col-sm-3">
+      <div class="col-xs-12 col-sm-3" style="padding: 30px;">
         <nav class="navbar">
+          <h2>Inhalt</h2>
           <ul class="nav nav-pills nav-stacked">
             <li><a href="#start">Einleitung</a></li>
             <li><a href="#build">Aufbau</a></li>
@@ -28,42 +29,48 @@
           </ul>
         </nav>
       </div>
-      <div class="col-xs-12 col-sm-9">
+      <div class="col-xs-12 col-sm-9" style="background: #FFF; min-height: 800px; padding: 30px;">
         <h1 id="start">Selectline - Oxid Schnittstelle</h1>
         <p>Author: Felix Baltruschat</p>
         <hr />
 
-        <div class="build">
+        <div id="build">
           <h2>Aufbau</h2>
         </div>
 
         <hr />
 
-        <div class="build">
+        <div id="build">
           <h2>Bestellungen</h2>
         </div>
 
         <hr />
 
-        <div class="voucher">
+        <div id="voucher">
           <h2>Gutscheine</h2>
-          <pre>
-<code class="hljs php">$oxid = array(
-  'vouchers' => array(
-    '61739677b8926324982d44436713508a'	=> array('type' => 'delivery', 'artnum' => '9908')
-  )
-);</code></pre>
+          <p>In Oxid angelegte Gutscheine müssen in der <kbd>config.php</kbd> manuell eingetragen werden.<br /><kbd>61739677b8926324982d44436713508a</kbd> ist die OXID ID des Gutscheines.</p>
+
+        <p><strong>Versandkosten</strong></p>
+        <p>Damit die Position Versandkosten in Selectline geändert werden soll, muss <kbd>type = delivery</kbd> sein. Zusätzlich muss im Array noch <kbd>artnum</kbd> mit der Art.Nr. der neuen Versandmethode gesetzt sein.</p>
+<pre><code class="hljs php">'61739677b8926324982d44436713508a' => array('type' => 'delivery', 'artnum' => '9908')</code></pre>
+        <p><strong>Rabatt 10%</strong></p>
+        <p>Leider kann aktuell nur 10% Rabatt Gutscheine erstellt werden. Das liegt daran, das Selectline nur eine Rabatt-Gruppe hat. Einfach den Array mit <kbd>type = discount</kbd> und <kbd>discountGroup = 6000</kbd> füllen. <var>6000</var> ist die Rabattgruppe in Selectline, die von Herrn Johannsen angelegt wurde.</p>
+<pre><code class="hljs php">'61739677b8926324982d44436713508a' => array('type' => 'discount', 'discountGroup' => '6000')</code></pre>
+
+        <p><strong>Versandkosten + Artikel</strong></p>
+        <p>Es können auch Gutscheine angelegt werden, die einen Artikel sowie die Versandkosten rabattieren. Den Array mit <kbd>type = delivery_article</kbd>, <kbd>delivery = siehe Versandkosten</kbd> und <kbd>discount_article = Art.Nr.</kbd> füllen. <var>discount_article</var> ist der Artikel der vond er Rechnung abgezogen werden sol.</p>
+<pre><code class="hljs php">'416320be16f3d49171b222a6bd3006ed' => array('type' => 'delivery_article', 'delivery' => '9908', 'discount_article' => '22903')</code></pre>
         </div>
 
         <hr />
 
-        <div class="cron">
+        <div id="cron">
           <h2>Cronjob</h2>
         </div>
 
       </div>
     </div>
-
+  </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="../bootstrap/js/bootstrap.min.js"></script>
     <script src="../js/highlight.pack.js"></script>
