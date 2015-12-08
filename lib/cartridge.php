@@ -35,7 +35,7 @@
 				}
 				return "INSERT INTO ".$table." (".$col.") VALUES (".$val.")";
 			}
-			
+
 		}
 
 		public function format_update_query($table, $update_array, $where){
@@ -43,7 +43,7 @@
 			$array= array();
 			foreach($update_array as $key => $item){
 				if($item === NULL){
-				
+
 				}else if(is_int($item)){
 					$array[] = $key ." = ".mysql_real_escape_string($item);
 				}else{
@@ -71,17 +71,17 @@
 		    } else {
 		        mt_srand((double) microtime() * 10000);
 		        $charid = strtoupper(md5(uniqid(rand(), true)));
-		       
+
 		        $guid = substr($charid,  0, 8) . '-' .
 		                substr($charid,  8, 4) . '-' .
 		                substr($charid, 12, 4) . '-' .
 		                substr($charid, 16, 4) . '-' .
 		                substr($charid, 20, 12);
-		 
+
 		        if ($include_braces) {
 		            $guid = '{' . $guid . '}';
 		        }
-		   
+
 		        return $guid;
 		    }
 		}
@@ -108,7 +108,7 @@
 			fopen($conf['lockfile'],'w');
 		}
 
-		public function set_log($text){
+		public static function set_log($text){
 			global $conf;
 			file_put_contents( $conf['logfile'],$text,FILE_APPEND);
 			echo $text;
