@@ -1,18 +1,18 @@
 <?php
 
 $oxid = array(
-	'db_host' => 'dedi507.your-server.de',
-	'db_user' => 'goschj_3',
-	'db_password' => 'r2kSvKjt34BQX3xd',
-	'db_name' => 'db_gosch_oxid',
-	'oxid_user' => 'baltruschat@wortbildton.de',
-	'oxid_password' => 'X4W=35+8',
+	'db_host' => '',
+	'db_user' => '',
+	'db_password' => '',
+	'db_name' => '',
+	'oxid_user' => '',
+	'oxid_password' => '',
 	'oxid_shop' => 'oxbaseshop',
 
 	// FTP Daten Oxid
-	'ftp_host' => 'wortbildton.de',
-	'ftp_user' => 'wortbild',
-	'ftp_password' => 'X4W=35+8',
+	'ftp_host' => '',
+	'ftp_user' => '',
+	'ftp_password' => '',
 	'ftp_path' => '/gosch/',
 
 	'delivery' => array(
@@ -39,7 +39,7 @@ $oxid = array(
 			'b1aee27e1e139011ac35d4173e353ca9' => '9909',	// Express Sa
 			'e1b7fcbab7439a4ab5424b4d693c67b2' => '9900',	// DHL EU
 			'f6ed7bfd30ec1855401e0554a8b042ec' => '9908'    // DHL Versandkostenfrei
-		)	
+		)
 	),
 
 	'vouchers' => array(
@@ -60,9 +60,9 @@ $oxid = array(
 
 
 $selectline = array(
-	'db_host' => '10.120.1.210',
-	//'db_host' => '\\\\HEINE-WAWI',
-	'db_user' => 'sa',
-	'db_password' => '%3u5AZ!#q7',
-	'db_name' => 'SL_MHEINE3'
+	'db_host' => '',
+	//'db_host' => '',
+	'db_user' => '',
+	'db_password' => '',
+	'db_name' => ''
 );
