@@ -36,7 +36,7 @@
         <div id="build">
           <h2>Aufbau</h2>
           <p>In der <kbd>config.php</kbd> werden alle wichtigen DB-Zugangsdaten für Oxid uns Selectline gespeichert. Selectline arbeitet mit einer MS SQl als Treiber ist sqlsrv installiert. Oxid relevante Daten sind in der Variablen <var>$oxid</var> und Selectline Daten in der Variablen <var>$selctline</var>.</p>
-          <p>In den Cartridges sind die verschiedenen Klassen für den Abgleich zwischen den Systemen, wichtigeste Klasse ist die Orders</p>
+          <p>In den Cartridges sind die verschiedenen Klassen für den Abgleich zwischen den Systemen, wichtigeste Klasse ist die Orders.</p>
         </div>
 
         <hr />
@@ -68,8 +68,13 @@
 <pre><code class="hljs php">'61739677b8926324982d44436713508a' => array('type' => 'discount', 'discountGroup' => '6000')</code></pre>
 
         <p><strong>Versandkosten + Artikel</strong></p>
-        <p>Es können auch Gutscheine angelegt werden, die einen Artikel sowie die Versandkosten rabattieren. Den Array mit <kbd>type = delivery_article</kbd>, <kbd>delivery = siehe Versandkosten</kbd> und <kbd>discount_article = Art.Nr.</kbd> füllen. <var>discount_article</var> ist der Artikel der vond er Rechnung abgezogen werden sol.</p>
+        <p>Es können auch Gutscheine angelegt werden, die einen Artikel sowie die Versandkosten rabattieren. Den Array mit <kbd>type = delivery_article</kbd>, <kbd>delivery = siehe Versandkosten</kbd> und <kbd>discount_article = Art.Nr.</kbd> füllen. <var>discount_article</var> ist der Artikel, der von der Rechnung abgezogen werden sol.</p>
 <pre><code class="hljs php">'416320be16f3d49171b222a6bd3006ed' => array('type' => 'delivery_article', 'delivery' => '9908', 'discount_article' => '22903')</code></pre>
+
+        <p><strong>Artikel (Geldgutschein z.B. 20€)</strong></p>
+        <p>Es können auch Gutscheine angelegt werden, die einen Wert gutscheiben. Dieser Wert muss als Artikel in SelectLine angelegt werden. Den Array mit <kbd>type = article</kbd>, <kbd>discount_article = Art.Nr.</kbd> füllen. <var>discount_article</var> ist der Artikel, der von der Rechnung abgezogen werden sol.</p>
+        <pre><code class="hljs php">'416320be16f3d49171b222a6bd3006ed' => array('type' => 'article', 'discount_article' => '22903')</code></pre>
+
         </div>
 
 

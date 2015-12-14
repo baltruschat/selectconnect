@@ -249,6 +249,8 @@ class Orders extends Cartridge
 					$removeDefaultDelivery = true;
 					$this->add_product_to_selectline($voucher['discount_article'], false, $order, $pos, $this->guid36(), $HauptKennung, false, true);
 					$this->add_product_to_selectline($voucher['delivery'], false, $order, $pos, $this->guid36(), $HauptKennung, true);
+				}elseif($voucher['type'] == 'article'){
+						$this->add_product_to_selectline($voucher['discount_article'], false, $order, $pos, $this->guid36(), $HauptKennung, false, true);
 				}
 			}
 
