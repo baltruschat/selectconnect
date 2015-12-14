@@ -362,15 +362,6 @@ class Orders extends Cartridge
 		}
 	}
 
-	* @param int $artnum       	 Artikelnummer
-	* @param object $product      DB-Object von Oxid-Article
-	* @param object $order 			 DB-Object aus Oxid
-	* @param string $pos          Artikelpositions Nummer
-	* @param guid36 $Kennung      Interne Kennunsnummer in Selectline
-	* @param guid36 $HauptKennung Interne Kennunsnummer in Selectline
-	* @param boolean $delivery    Ist die Artikelposition die Versandmethode
-	* @param boolean $addonArticle Ist die Position ein Addon-Artikel
-
 	/**
 	 * [add_product_sets_to_selectline description]
 	 * @param object $product      DB-Object von Oxid-Article
