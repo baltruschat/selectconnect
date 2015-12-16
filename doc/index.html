@@ -10,14 +10,14 @@
 
     <title>Selectline - Oxid Schnittstelle</title>
 
-    <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/github.css">
   </head>
 
   <body style="background: #EEE;">
   <div class="container-fluid">
     <div class="row">
-      <div class="col-xs-12 col-sm-3" style="padding: 30px;">
+      <div class="col-xs-12 col-sm-3 col-lg-2" style="padding: 30px;">
         <nav class="navbar navbar-fixed" style="position:fixed;">
           <h2>Inhalt</h2>
           <ul class="nav nav-pills nav-stacked">
@@ -28,7 +28,7 @@
           </ul>
         </nav>
       </div>
-      <div class="col-xs-12 col-sm-9" style="background: #FFF; min-height: 800px; padding: 30px;">
+      <div class="col-xs-12 col-sm-9 col-lg-10" style="background: #FFF; min-height: 800px; padding: 30px;">
         <h1 id="start">Selectline - Oxid Schnittstelle</h1>
         <p>Author: Felix Baltruschat</p>
         <hr />
@@ -58,6 +58,26 @@
 
         <div id="voucher">
           <h2>Gutscheine</h2>
+          <img src="../img/oxid-gutscheine.png" class="pull-right img-thumbnail" />
+          <p>Es können verschiedene Arten von Gutscheinen in Oxid angelegt werden. Bei Rabatt git es das Selectfeld in der die Art des Gutschein festgelegt wird. Wenn ein Prozent-Gutschein erstellt werden soll, geht das leider immer nur mit 10%, da Selectline nur einen Wert kann</p>
+
+          <p><strong>Warenwert Gutschein</strong></p>
+          <p>Bitte im Selectfeld <var>abs</var> auswählen und im dem Feld daneben den Wert des Gutscheines.</p>
+
+          <p><strong>Warenwert + Versandkostenfrei</strong></p>
+          <p>Bitte im Selectfeld <var>Versandkosten</var> auswählen und im dem Feld daneben den Wert des Gutscheines und in dem Feld "Rabatt Versandmethode" die OXID der Versandmethode.</p>
+
+          <p><strong>Versandkostenfrei</strong></p>
+          <p>Bitte im Selectfeld <var>Versandkosten</var> auswählen und in dem Feld "Rabatt Versandmethode" die OXID der Versandmethode.</p>
+
+          <p><strong>Versandkostenfrei + Artikel</strong></p>
+          <p>Bitte im Selectfeld <var>Versandkosten + Artikel</var> auswählen und in dem Feld "Rabatt Versandmethode" die OXID der Versandmethode, in dem Feld "Rabatt Artikel" die Artikelnummer eintragen.</p>
+
+          <p><strong>10% Gutschein</strong></p>
+          <p>Bitte im Selectfeld <var>%</var> auswählen und in dem Feld daneben 10% angeben.</p>
+
+          <h3>Anlegen des Gutscheines in der Schnittstelle</h3>
+
           <p>In Oxid angelegte Gutscheine müssen in der <kbd>config.php</kbd> manuell eingetragen werden.<br /><kbd>61739677b8926324982d44436713508a</kbd> ist die OXID ID des Gutscheines.</p>
 
         <p><strong>Versandkosten</strong></p>
@@ -83,7 +103,7 @@
     </div>
   </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script src="../bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
     <script src="../js/highlight.pack.js"></script>
     <script>hljs.initHighlightingOnLoad();</script>
   </body>
